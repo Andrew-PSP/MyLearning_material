@@ -1,0 +1,43 @@
+{
+  "groups": [
+    {
+      "name": "app",
+      "type": "com.pyae.ApplicationProperties",
+      "sourceType": "com.pyae.ApplicationProperties"
+    },
+    {
+      "name": "app.sql",
+      "type": "com.pyae.ApplicationProperties$RepositoryConfig",
+      "sourceType": "com.pyae.ApplicationProperties",
+      "sourceMethod": "public com.pyae.ApplicationProperties.RepositoryConfig getSql() "
+    }
+  ],
+  "properties": [
+    {
+      "name": "app.sql.district-groupby",
+      "type": "java.lang.String",
+      "sourceType": "com.pyae.ApplicationProperties$RepositoryConfig"
+    },
+    {
+      "name": "app.sql.district-select",
+      "type": "java.lang.String",
+      "sourceType": "com.pyae.ApplicationProperties$RepositoryConfig"
+    },
+    {
+      "name": "app.sql.division-groupby",
+      "type": "java.lang.String",
+      "sourceType": "com.pyae.ApplicationProperties$RepositoryConfig"
+    },
+    {
+      "name": "app.sql.division-select",
+      "type": "java.lang.String",
+      "sourceType": "com.pyae.ApplicationProperties$RepositoryConfig"
+    },
+    {
+      "name": "app.sql.township-select",
+      "type": "java.lang.String",
+      "sourceType": "com.pyae.ApplicationProperties$RepositoryConfig"
+    }
+  ],
+  "hints": []
+}
