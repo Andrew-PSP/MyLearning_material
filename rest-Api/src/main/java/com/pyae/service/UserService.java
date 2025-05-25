@@ -32,4 +32,9 @@ public class UserService {
 	public Customer findById(int id) {
 		return repo.findById(id).orElseThrow(() ->new UserNotFoundException("Please Enter User's ID correctly"));
 	}
+	
+	@Transactional
+	public void deleteById(Integer id) {
+		repo.deleteById(id);
+	}
 }
