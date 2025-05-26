@@ -35,7 +35,7 @@ public class UserController {
 	@PostMapping(path= "/Users")
 	public ResponseEntity<Customer> createUser(@RequestBody Customer user) {
 		var id = service.create(user);
-		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("{id}").buildAndExpand(id).toUri();
+		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(id).toUri();
 		return ResponseEntity.created(location).build();
 	}
 	
