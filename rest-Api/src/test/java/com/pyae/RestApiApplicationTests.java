@@ -20,7 +20,7 @@ class RestApiApplicationTests {
 	
 	@Test
 	void contextLoads() {
-		var customer = new Customer("hello", LocalDate.of(2030, 5, 12));
+		var customer = new Customer("hello", LocalDate.of(2030, 5, 12),"hello","great");
 		assertThrows(ValidationUserException.class, ()-> service.create(customer));
 	}
 

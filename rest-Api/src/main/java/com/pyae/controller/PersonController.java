@@ -12,7 +12,7 @@ import com.pyae.entity.Person2;
 @RestController
 public class PersonController {
 
-	
+	//url versioning
 	@GetMapping("/v1/person")
 	public Person UrlVersion1() {
 		return new Person1("Kyaw Gyi");
@@ -23,6 +23,7 @@ public class PersonController {
 		return new Person2(new Name("Kyaw", "Gyi"));
 	}
 	
+	//parameter versioning
 	@GetMapping(path ="/person", params = "version=1")
 	public Person requestParameterVersion1() {
 		return new Person1("Kyaw Gyi");
@@ -33,6 +34,7 @@ public class PersonController {
 		return new Person2(new Name("Kyaw", "Gyi"));
 	}
 	
+	//custom header versioning
 	@GetMapping(path ="/person/header", headers = "PERSON-VERSION=1")
 	public Person requestHeaderVersion1() {
 		return new Person1("Kyaw Gyi");
@@ -43,6 +45,7 @@ public class PersonController {
 		return new Person2(new Name("Kyaw", "Gyi"));
 	}
 	
+	//accept header versioning
 	@GetMapping(path ="/person/accept", produces = "application/app-v1+json")
 	public Person acceptHeaderVersion1() {
 		return new Person1("Kyaw Gyi");
